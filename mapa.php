@@ -66,6 +66,8 @@
 
             //crear icon custom
 
+            //hola
+
             var firefoxIcon = L.icon({
             iconUrl: 'img/animal-domestic-footstep-svgrepo-com.svg',
             iconSize: [20, 70], // size of the icon
