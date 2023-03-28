@@ -5,10 +5,6 @@
     $sql = "SELECT * from informacion"; //datos individuales
     $sql2 = "SELECT * from areas"; //datos agrupados
 
-
-
-   
-
     $consulta = $bd->query($sql);
     $consulta2 = $bd->query($sql2);
 
@@ -26,9 +22,15 @@
         $datos2[] = $registro2;
 
     } //datos agrupados
+
     $json2 = json_encode($datos2); //datos agrupados
     
     $json = json_encode($datos); //datos invididuales
+
+
+    $json = json_encode($datos); //datos invididuales
+    $json2 = json_encode($datos2); //datos agrupados
+
     
 
 

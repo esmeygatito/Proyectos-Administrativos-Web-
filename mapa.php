@@ -60,7 +60,9 @@
             attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
             }).addTo(map);
 
-        
+
+
+            var jsonPHP = JSON.parse('<?php echo $json; ?>');   //json de datos individuales
 
             var jsonPHP2 = JSON.parse('<?php echo $json2; ?>')  //json de datos agrupados
 
@@ -85,9 +87,22 @@
             // create marker object, pass custom icon as option, pass content and options to popup, add to map
             
 
+
       
 
            console.log(jsonPHP2);
+
+            for(i =0; i<jsonPHP.length; i++){
+                var marcadorPHP = L.marker([jsonPHP[i]['Latitud'], jsonPHP[i]['Longitud']], {icon: firefoxIcon}).addTo(map).bindPopup(
+
+                    "<h3>"+jsonPHP[i]['Punto']+ "</h3> Responsable:"+ jsonPHP[i]['Responsable'] + "<br>Contacto: " + jsonPHP[i]['Contacto'] 
+                    + "<img src = " + jsonPHP[i]['Ampliacion'] + ">"    
+                    
+                    ,customOptions)
+            } //imprimir datos individuales
+
+           // console.log(jsonPHP2);
+
             
           for(j = 0; j<jsonPHP2.length; j++){
 
