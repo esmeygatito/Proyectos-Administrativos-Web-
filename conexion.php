@@ -23,8 +23,14 @@
 
     } //datos agrupados
 
+    $json2 = json_encode($datos2); //datos agrupados
+    
+    $json = json_encode($datos); //datos invididuales
+
+
     $json = json_encode($datos); //datos invididuales
     $json2 = json_encode($datos2); //datos agrupados
+
     
 
 
